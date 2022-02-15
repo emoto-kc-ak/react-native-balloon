@@ -1,6 +1,6 @@
 {
   "name": "react-native-balloon",
-  "version": "1.0.0",
+  "version": "1.1.0-alpha.0",
   "description": "Balloon component for React Native",
   "main": "index.js",
   "types": "index.d.ts",
@@ -8,9 +8,12 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "@takahi5",
+  "contributors": [
+    "Kikuo Emoto <emoto.kc@om.asahi-kasei.co.jp>"
+  ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:takahi5/react-native-balloon.git"
+    "url": "git@github.com:emoto-kc-ak/react-native-balloon.git"
   },
   "license": "MIT",
   "dependencies": {
