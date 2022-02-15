@@ -45,7 +45,10 @@ export default class Balloon extends Component {
     borderWidth: PropTypes.number,
     borderRadius: PropTypes.number,
     backgroundColor: PropTypes.string,
-    triangleOffset: PropTypes.string,
+    triangleOffset: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number
+    ]),
     triangleDirection: PropTypes.string,
     triangleSize: PropTypes.number,
     containerStyle: ViewPropTypes.style,
