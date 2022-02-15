@@ -98,7 +98,11 @@ export default class Balloon extends Component {
         return {
           ...base,
           top: 0,
-          left: this.triangleOffset,
+          ...(this.triangleOffset >= 0 ? {
+            left: this.triangleOffset
+          } : {
+            right: -this.triangleOffset
+          }),
           borderLeftColor: "transparent",
           borderLeftWidth: this.triangleSize / 2,
           borderBottomWidth: this.triangleSize,
@@ -110,7 +114,11 @@ export default class Balloon extends Component {
         return {
           ...base,
           left: 0,
-          top: this.triangleOffset,
+          ...(this.triangleOffset >= 0 ? {
+            top: this.triangleOffset
+          } : {
+            bottom: -this.triangleOffset
+          }),
           borderTopColor: "transparent",
           borderTopWidth: this.triangleSize / 2,
           borderRightWidth: this.triangleSize,
@@ -122,7 +130,11 @@ export default class Balloon extends Component {
         return {
           ...base,
           right: 0,
-          top: this.triangleOffset,
+          ...(this.triangleOffset >= 0 ? {
+            top: this.triangleOffset
+          } : {
+            bottom: -this.triangleOffset
+          }),
           borderTopColor: "transparent",
           borderTopWidth: this.triangleSize / 2,
           borderLeftWidth: this.triangleSize,
@@ -134,7 +146,11 @@ export default class Balloon extends Component {
         return {
           ...base,
           bottom: 0,
-          left: this.triangleOffset,
+          ...(this.triangleOffset >= 0 ? {
+            left: this.triangleOffset
+          } : {
+            right: -this.triangleOffset
+          }),
           borderLeftColor: "transparent",
           borderLeftWidth: this.triangleSize / 2,
           borderTopWidth: this.triangleSize,
