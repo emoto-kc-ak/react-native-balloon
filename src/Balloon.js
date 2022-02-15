@@ -21,7 +21,8 @@ const styles = StyleSheet.create({
   },
   balloonContainer: {
     margin: TRIANGLE_SIZE,
-    width: WIDTH,
+    // balloon size is determined according to its children.
+    // width: WIDTH,
     backgroundColor: BACKGROUND_COLOR,
     borderColor: BORDER_COLOR,
     borderWidth: BORDER_WIDTH,
@@ -30,7 +31,8 @@ const styles = StyleSheet.create({
     flexDirection: "row"
   },
   childrenContainer: {
-    flex: 1
+    // balloon size is determined according to its children.
+    // flex: 1
   }
 });
 
