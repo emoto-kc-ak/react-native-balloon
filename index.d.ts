@@ -38,7 +38,7 @@ declare type BalloonProps = {
    * specify the offset of triangle position from top or left as percentage.
    * default: "30%"
    */
-  triangleOffset?: string;
+  triangleOffset?: string | number;
 
   /**
    *specify the triangle direction from top/bottom/left/right.
