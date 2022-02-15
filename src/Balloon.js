@@ -20,7 +20,8 @@ const styles = StyleSheet.create({
     backgroundColor: "transparent"
   },
   balloonContainer: {
-    margin: TRIANGLE_SIZE,
+    // margin depends on the direction of the triangle part.
+    // margin: TRIANGLE_SIZE,
     // balloon size is determined according to its children.
     // width: WIDTH,
     backgroundColor: BACKGROUND_COLOR,
@@ -167,6 +168,21 @@ export default class Balloon extends Component {
     }
   }
 
+  get margin() {
+    const direction = this.props.triangleDirection || "bottom";
+    const triangleSize = this.triangleSize;
+    switch (direction) {
+      case "top":
+        return { marginTop: triangleSize };
+      case "left":
+        return { marginLeft: triangleSize };
+      case "right":
+        return { marginRight: triangleSize };
+      case "bottom":
+        return { marginBottom: triangleSize };
+    }
+  }
+
   render() {
     const {
       width,
@@ -196,7 +212,7 @@ export default class Balloon extends Component {
             borderWidth && { borderWidth },
             borderRadius && { borderRadius },
             backgroundColor && { backgroundColor },
-            triangleSize && { margin: triangleSize },
+            this.margin,
             containerStyle && containerStyle
           ]}
         >
