@@ -4,7 +4,7 @@ An UI component to draw balloons.
 ![balloon_example](https://user-images.githubusercontent.com/7026785/36620231-6514b930-1935-11e8-84e2-79a25e44f25a.png)
 
 This fork has the following differences from the original,
-- The width of a balloon is determined according to its children if `width` is omitted.
+- The width of a balloon is determined according to its children and restricted by its parent if `width` is omitted.
 - A balloon gives a margin only to the side matching the triangle direction.
 - `triangleOffset` may be either a string (percentage) or number (pixels).
 - If `triangleOffset` is a negative number, its absolute value is treated as an offset from the bottom or right of a balloon.
