@@ -77,7 +77,9 @@ export default class Balloon extends Component {
   }
 
   get triangleOffset() {
-    return this.props.triangleOffset || TRIANGLE_OFFSET;
+    return this.props.triangleOffset != null
+      ? this.props.triangleOffset
+      : TRIANGLE_OFFSET;
   }
 
   get triangleSize() {
@@ -93,12 +95,13 @@ export default class Balloon extends Component {
       height: 0,
       zIndex: 100
     };
+    const isStringOffset = typeof this.triangleOffset === 'string';
     switch (direction) {
       case "top":
         return {
           ...base,
           top: 0,
-          ...(this.triangleOffset >= 0 ? {
+          ...(isStringOffset || this.triangleOffset >= 0 ? {
             left: this.triangleOffset
           } : {
             right: -this.triangleOffset
@@ -114,7 +117,7 @@ export default class Balloon extends Component {
         return {
           ...base,
           left: 0,
-          ...(this.triangleOffset >= 0 ? {
+          ...(isStringOffset || this.triangleOffset >= 0 ? {
             top: this.triangleOffset
           } : {
             bottom: -this.triangleOffset
@@ -130,7 +133,7 @@ export default class Balloon extends Component {
         return {
           ...base,
           right: 0,
-          ...(this.triangleOffset >= 0 ? {
+          ...(isStringOffset || this.triangleOffset >= 0 ? {
             top: this.triangleOffset
           } : {
             bottom: -this.triangleOffset
@@ -146,7 +149,7 @@ export default class Balloon extends Component {
         return {
           ...base,
           bottom: 0,
-          ...(this.triangleOffset >= 0 ? {
+          ...(isStringOffset || this.triangleOffset >= 0 ? {
             left: this.triangleOffset
           } : {
             right: -this.triangleOffset
