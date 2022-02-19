@@ -12,7 +12,7 @@ This fork has the following differences from the original,
 ## Install
 
 ```
-npm install https://github.com/emoto-kc-ak/react-native-balloon.git#v1.1.0-alpha.0
+npm install https://github.com/emoto-kc-ak/react-native-balloon.git#v1.1.0-alpha.1
 ```
 
 ## Usage
