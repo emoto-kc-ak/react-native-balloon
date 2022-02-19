@@ -1,6 +1,6 @@
 {
   "name": "react-native-balloon",
-  "version": "1.1.0-alpha.0",
+  "version": "1.1.0-alpha.1",
   "description": "Balloon component for React Native",
   "main": "index.js",
   "types": "index.d.ts",
